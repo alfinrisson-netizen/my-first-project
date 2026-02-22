@@ -1,6 +1,7 @@
 let myInput = document.getElementById("taskInput");
 let btn = document.getElementById("addBtn");
 let list = document.getElementById("tasklist");
+let save = document.getElementById("saveBtn");
 
 btn.addEventListener("click", function(){
     const taskText = myInput.value;
@@ -19,8 +20,14 @@ btn.addEventListener("click", function(){
        
     })
 
+
+
     list.appendChild(li);
     list.appendChild(dbtn);
     
     myInput.value = "";
 });
+
+save.addEventListener("click", function(){
+    save.textContent = "yes";
+})
